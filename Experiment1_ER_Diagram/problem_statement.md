@@ -44,3 +44,49 @@ Design a database for patient management, appointments, medical records, and bil
 4. Explain:
    - Why you chose the entities and relationships.
    - How you modeled prerequisites or billing.
+
+
+## ER Diagram:
+
+![image](https://github.com/user-attachments/assets/cb278279-0668-44a2-8adb-edd5653f26ff)
+
+
+### 1. Entities and Their Attributes
+
+Entity -	Attributes
+
+STUDENT - STU_ID (PK), NAME, DOB, PH_NO, EMAIL
+
+COURSE -	COURSE_ID (PK), COURSE_NAME, NO_OF_CREDITS
+
+PROGRAM - PROGRAM_ID (PK), PROGRAM_NAME, DEPT_ID (FK)
+
+DEPARTMENT - DEPT_ID (PK), DEPT_NAME
+
+INSTRUCTOR - STAFF_ID (PK), STAFF_NAME, PH_NO, EMAIL, DEPT_ID (FK)
+
+### 2. Relationships and Cardinality
+
+Relationship - Between - Type/Cardinality - Notes
+
+ENROLL -	STUDENT - COURSE	Many-to-Many	A student can enroll in many courses; each course can have many students
+
+TAUGHT -	INSTRUCTOR - COURSE	One-to-Many or Many-to-Many	An instructor can teach multiple courses; a course may be taught by multiple instructors
+
+GROUP -	PROGRAM - DEPARTMENT	Many-to-One	Multiple programs can belong to one department
+
+### 3. Participation Constraints
+
+STUDENT ↔ ENROLL: Partial participation (not all students need to be enrolled in courses).
+
+COURSE ↔ ENROLL: Total participation (every course must be enrolled by at least one student).
+
+INSTRUCTOR ↔ TAUGHT: Total participation (every course must be taught).
+
+PROGRAM ↔ GROUP ↔ DEPARTMENT: Total on PROGRAM side, partial on DEPARTMENT side.
+
+## RESULT:
+
+Thus, to understand and apply the concepts of ER modeling by creating an ER diagram for a real-world application has been done successfully.
+
+
