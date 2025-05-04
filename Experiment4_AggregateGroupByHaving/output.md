@@ -1,119 +1,142 @@
 **Question 1**
 --
--- Paste Question 1 here
+![image](https://github.com/user-attachments/assets/79472add-42fd-427a-a69e-e36b6cf9415a)
+
 
 ```sql
--- Paste your SQL code below for Question 1
+select PatientID, count(*) as AvgMedications from MedicalRecords group by PatientID;
 ```
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/3ab6aef1-6f40-4984-8e56-187ee947497c)
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+![image](https://github.com/user-attachments/assets/af2ab57b-17d2-43cf-9dca-2ff0a9964832)
+
 
 ```sql
--- Paste your SQL code below for Question 2
+select Specialty,count(*) as TotalDoctor from Doctors group by specialty;
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/5133f1fc-3397-4710-be3d-1a5b63ac04b2)
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+![image](https://github.com/user-attachments/assets/69f836d9-8216-4980-9b76-ab771877a496)
+
 
 ```sql
--- Paste your SQL code below for Question 3
+select InsuranceCompany,count(*) as TotalPatients from Insurance group by InsuranceCompany;
 ```
 
 **Output:**
 
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/ba9f0663-9545-40c0-a63e-a849eda57417)
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+![image](https://github.com/user-attachments/assets/97b12e74-3380-4faa-8626-ea91b761b703)
+
 
 ```sql
--- Paste your SQL code below for Question 4
+select count(distinct age) as COUNT from employee;
 ```
 
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/396f45af-377c-4b8e-92ab-47c3d8eca1a2)
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+![image](https://github.com/user-attachments/assets/b2e024fb-c931-435a-a731-f26fcb986632)
+
 
 ```sql
--- Paste your SQL code below for Question 5
+select count(distinct salesman_id) as COUNT from orders;
 ```
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/c62f897a-6ab9-424a-add5-5b6219a9e60f)
+
 
 **Question 6**
 ---
--- Paste Question 6 here
+![image](https://github.com/user-attachments/assets/473c06d4-04aa-4ced-9464-4e081d4824cf)
+
 
 ```sql
--- Paste your SQL code below for Question 6
+select name as Employee_Name,min(age) as Age from employee;
+
 ```
 
 **Output:**
 
-![Output6](output.png)
+![image](https://github.com/user-attachments/assets/2aa90160-1a9f-48d0-b1aa-e221be1b1c99)
+
 
 **Question 7**
 ---
--- Paste Question 7 here
+![image](https://github.com/user-attachments/assets/66bc8d14-29a3-4b44-8430-d25b8c15a777)
+
 
 ```sql
--- Paste your SQL code below for Question 7
+select count(*) as COUNT from customer where city != 'Noida';
 ```
 
 **Output:**
 
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/bcd50289-48df-45ab-b2d1-c14c981526cf)
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+![image](https://github.com/user-attachments/assets/15eaa93f-2263-40b6-bd81-7488b1f2a65c)
 
 ```sql
--- Paste your SQL code below for Question 8
+SELECT age, MAX(income) AS 'MAX(income)'
+FROM employee
+GROUP BY age
+HAVING MAX(income) > 2000000;
 ```
 
 **Output:**
 
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/f37a3da9-6e90-419f-befc-d0eeeb1fa312)
 
 **Question 9**
 ---
--- Paste Question 9 here
+![image](https://github.com/user-attachments/assets/5f4fc90d-a96a-489e-976d-86d240c359fc)
 
 ```sql
--- Paste your SQL code below for Question 9
+select city,sum(income) as Income from employee
+group by city
+having Income>200000;
 ```
 
 **Output:**
 
-![Output9](output.png)
+![image](https://github.com/user-attachments/assets/9bdda9fe-918b-4f90-9221-d0bcd3a40066)
 
 **Question 10**
 ---
--- Paste Question 10 here
+![image](https://github.com/user-attachments/assets/e92a06c7-9d2e-4bda-b18b-fcb63e84160f)
+
 
 ```sql
--- Paste your SQL code below for Question 10
+select jdate,AVG(workhour) from employee1
+group by jdate
+having avg(workhour)<10
 ```
 
 **Output:**
 
-![Output10](output.png)
+![image](https://github.com/user-attachments/assets/b09503c6-fb20-4b57-a5f9-7d64e1c7f9af)
